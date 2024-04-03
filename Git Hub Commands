@@ -1,0 +1,9 @@
+to clone a repo :
+  git clone 'url'
+to push to a branch do these :
+git checkout main
+git pull origin main
+git checkout -b feature-branch
+git add .
+git commit -m "Your commit message here"
+git push origin feature-branch:Dev-BackEnd
