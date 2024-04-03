@@ -1,6 +1,7 @@
 package com.newglide.onboardingproj.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 public class Address {
+	@Id
 	private String houseNumber;
 	private String streetName;
 	private String areaName;

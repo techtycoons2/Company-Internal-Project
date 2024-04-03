@@ -10,14 +10,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Data
+@Entity
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,10 +31,14 @@ public class Employee {
 	private LocalDate empHiredate;
 	@Column(nullable = true)
 	private LocalDate empEndDate;
+	@OneToOne
 	private Address address;
+	@OneToOne
 	private Leave leave;
 	@ManyToOne
 	private Manager manager;
 	@OneToMany
 	private List<Project> project;
+	
+	
 }
