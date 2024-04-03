@@ -1,5 +1,7 @@
 package com.newglide.onboardingproj.service;
 
-public interface EmployeeService {
+import com.newglide.onboardingproj.entity.Employee;
 
+public interface EmployeeService {
+	Employee empLogin(String email,String password);
 }
