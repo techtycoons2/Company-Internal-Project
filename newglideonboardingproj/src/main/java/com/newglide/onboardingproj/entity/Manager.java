@@ -2,6 +2,8 @@ package com.newglide.onboardingproj.entity;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +21,8 @@ public class Manager {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int managerId;
+	@Column(nullable = false)
 	private String managerName;
-	@OneToMany
+	@OneToMany(mappedBy = "manager", cascade = CascadeType.ALL)
 	private List<Employee> employees;
 }
