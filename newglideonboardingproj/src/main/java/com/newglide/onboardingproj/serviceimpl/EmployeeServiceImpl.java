@@ -13,10 +13,14 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Autowired
 	EmployeeDao empDao;
 	
+	
 	@Override
 	public Employee empLogin(String empEmail, String empPassword) {
-		
 		return empDao.empLogin(empEmail, empPassword);
 	}
 
+	@Override
+	public Employee empSave(Employee e) {
+		return empDao.empSave(e);
+	}
 }

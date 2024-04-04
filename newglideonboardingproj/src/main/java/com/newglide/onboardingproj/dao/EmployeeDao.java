@@ -15,4 +15,8 @@ public class EmployeeDao {
 	public Employee empLogin(String empEmail, String empPassword) {
 		return er.findByEmpEmailAndEmpPassword(empEmail, empPassword);
 	}
+	
+	public Employee empSave(Employee e) {
+		return er.save(e);
+	}
 }
