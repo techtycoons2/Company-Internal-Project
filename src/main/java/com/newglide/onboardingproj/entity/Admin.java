@@ -11,4 +11,8 @@ public class Admin {
 	private String adminName;
 	private static String adminEmail = "admin@newglide.com";
 	private static String adminPassword = "Admin@123";
+	
+	
+	
+	
 }

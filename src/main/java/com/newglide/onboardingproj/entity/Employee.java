@@ -25,9 +25,13 @@ public class Employee {
 	private int empId;
 	private String empName;
 	private String empImage;
+	private int age;
+	private String gender;
 	private String empEmail;
 	private String empPassword;
 	private long empPhone;
+	private String role;
+	
 	private LocalDate empHiredate;
 	@Column(nullable = true)
 	private LocalDate empEndDate;
@@ -39,6 +43,5 @@ public class Employee {
 	private Manager manager;
 	@OneToMany
 	private List<Project> project;
-	
-	
+
 }

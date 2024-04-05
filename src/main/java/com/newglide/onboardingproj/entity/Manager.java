@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +16,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
+@Table(name="Manager")
 public class Manager {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int managerId;
 	private String managerName;
+	
 	@OneToMany
 	private List<Employee> employees;
 }
